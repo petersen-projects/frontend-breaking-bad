@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CharacterListItem correctly 1`] = `
+<div
+  className="list-row"
+>
+  <div
+    className="list-row__info"
+  >
+    <div
+      className="list-row__title"
+    />
+    <div>
+      Age: 
+    </div>
+    <div>
+      Status: 
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render CharacterListItem with first character 1`] = `
+<div
+  className="list-row"
+>
+  <div
+    className="list-row__info"
+  >
+    <div
+      className="list-row__title"
+    >
+      Walter White
+    </div>
+    <div>
+      Age: 
+    </div>
+    <div>
+      Status: 
+      Presumed dead
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CharactersList with characters 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <CharacterList
+    filteredData={
+      Array [
+        Object {
+          "birthday": "09-07-1958",
+          "id": 1,
+          "img": "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg",
+          "name": "Walter White",
+          "status": "Presumed dead",
+        },
+        Object {
+          "birthday": "09-24-1984",
+          "id": 2,
+          "img": "https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441",
+          "name": "Jesse Pinkman",
+          "status": "Alive",
+        },
+        Object {
+          "birthday": "08-11-1970",
+          "id": 3,
+          "img": "https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg",
+          "name": "Skyler White",
+          "status": "Alive",
+        },
+        Object {
+          "birthday": "07-08-1993",
+          "id": 4,
+          "img": "https://media1.popsugar-assets.com/files/thumbor/WeLUSvbAMS_GL4iELYAUzu7Bpv0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/01/12/910/n/1922283/fb758e62b5daf3c9_TCDBRBA_EC011/i/RJ-Mitte-Walter-White-Jr.jpg",
+          "name": "Walter White Jr.",
+          "status": "Alive",
+        },
+        Object {
+          "birthday": "Unknown",
+          "id": 7,
+          "img": "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_mike-ehrmantraut-lg.jpg",
+          "name": "Mike Ehrmantraut",
+          "status": "Deceased",
+        },
+      ]
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`should render CharactersList with empty message 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CharacterList
+    filteredData={Array []}
+  >
+    <div
+      className="list-body"
+    >
+      <div
+        className="message"
+      >
+        no data :(
+      </div>
+    </div>
+  </CharacterList>
+</Provider>
+`;

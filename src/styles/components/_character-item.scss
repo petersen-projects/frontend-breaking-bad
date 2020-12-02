@@ -1,0 +1,33 @@
+.list-row__title {
+   font-size: $font-size-large;
+}
+
+.list-row__image-container {
+   max-width: 50%;
+   height: inherit;
+   img {
+      max-height: 100%;
+      max-width: 100%;
+   }
+}
+
+.list-row__info {
+   padding-left: 2.5rem;
+   font-size: $font-size-medium;
+
+   div:not(:first-child) {
+      margin-top: 2.5rem;
+   }
+}
+
+.list-row {
+   background: $gray;
+   margin-top: $separator-margin;
+   padding: $inner-padding;
+   color: $white;
+   // height: 10rem;
+   width: 100%;
+   border-radius: .5rem;
+   display: flex;
+   flex-direction: row;
+}

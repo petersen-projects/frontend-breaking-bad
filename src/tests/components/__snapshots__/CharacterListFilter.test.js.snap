@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CharacterListFilter correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CharacterListFilter
+    filters={Object {}}
+    setCharacterNameFilter={[Function]}
+  >
+    <div>
+      <input
+        onChange={[Function]}
+        placeholder="Search by character name..."
+        type="text"
+      />
+      <select
+        className=""
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          Choose one Status
+        </option>
+        <option
+          value="alive"
+        >
+          Alive
+        </option>
+        <option
+          value="deceased"
+        >
+          Deceased
+        </option>
+      </select>
+      <button>
+        Search
+      </button>
+    </div>
+  </CharacterListFilter>
+</Provider>
+`;
