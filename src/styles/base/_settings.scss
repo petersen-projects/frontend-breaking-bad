@@ -1,20 +1,19 @@
-$white: #f0f5f9;
-$darker-white: #f6fbff;
-$gray: #ababac;
-$dark-gray: #1e2022;
-$primary-text: #212121;
-$secondary-text: #757575;
-$divider-color: #BDBDBD;
-$icons-color: #000000;
+$white: #FFFFFF;
+$white-alpha: rgba(255, 255, 255, 0.5);
+$black: #000000;
+$light-brown: #E6E2D3;
+$dark-yellow: #DAC292;
+$brown: #C4B7A6;
+$darker-brown: #B9936C;
+$darker-brown-alpha: rgba(185, 147, 108, 0.5);
+$light-blue: #d7ddff;
+$blue: #566fff;
+$dark-blue: #677fff;
 
+$default-padding: 10rem;
+$default-margin: 1rem;
+
+$font-size-xlarge: 4rem;
 $font-size-large: 3rem;
 $font-size-medium: 2rem;
-$font-size-small: 1rem;
-
-$header-height: 80px;
-
-$wrapper-max-width: 1024px;
-$wrapper-padding: 16px;
-
-$separator-margin: 3.5rem;
-$inner-padding: 3.5rem;
+$font-size-small: 1.5rem;

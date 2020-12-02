@@ -1,21 +1,10 @@
 html {
-   // valor para transformar 1 rem = 10px
+   // 1rem = 10px
    font-size: 62.5%;
 }
-// * {
-//    box-sizing: border-box;
-// }
 
 body {
    font-family: monospace;
    font-size: $font-size-medium;
-   background: $darker-white;
-}
-
-button {
-   cursor: pointer;
-}
- 
-button:disabled {
-   cursor: default;
+   background: $light-brown;
 }

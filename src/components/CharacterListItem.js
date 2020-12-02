@@ -1,16 +1,14 @@
 import React from 'react';
 
 export const CharacterListItem = ({
-   name, age, img, status
+   name, age, img, status, lastCharacterRef
 }) => (
-   <div className="list-row">
-      {/* <div className="list-row__image-container">
-      <img src={img}></img>
-      </div> */}
-      <div className="list-row__info">
-         <div className="list-row__title">{name}</div>
-         <div>Age: {age}</div>
-         <div>Status: {status}</div>
+   <div ref={lastCharacterRef} className="list-item">
+      <img className="list-item__image" src={img}></img>
+      <div className="list-item__info">
+         <div className="list-item__title">{name}</div>
+         <div className="list-item__info1">Age: {age}</div>
+         <div className="list-item__info2">Status: {status}</div>
       </div>
    </div>
 );

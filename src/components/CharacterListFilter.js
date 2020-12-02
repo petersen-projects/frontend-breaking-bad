@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setNameFilter, setCharacterStatusFilter } from '../actions/filters';
-import { startGetAllCharactersFromWs } from '../actions/characters';
 
 export const CharacterListFilter = () => {
    const name = useSelector(state => state.filters.name)
@@ -17,15 +16,16 @@ export const CharacterListFilter = () => {
    }
 
    return (
-      <div>
+      <div className="filter">
          <input
             type="text"
             placeholder="Search by character name..."
             value={name}
             onChange={onNameChange}
+            className="filter__input"
          />
          <select
-            className=""
+            className="filter__select"
             value={status}
             onChange={onStatusFilterChange}
          >
@@ -33,7 +33,6 @@ export const CharacterListFilter = () => {
             <option value="alive">Alive</option>
             <option value="deceased">Deceased</option>
          </select>
-         <button>Search</button>
       </div>
    )
 }

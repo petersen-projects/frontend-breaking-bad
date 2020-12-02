@@ -2,7 +2,7 @@
   position:fixed;
   width:100%;
   left:0;right:0;top:0;bottom:0;
-  background-color: rgba(255,255,255,0.7);
+  background-color: $white-alpha;
   z-index:9999;
 }
 
@@ -19,10 +19,10 @@
   justify-content: center;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid blue;
-  border-bottom: 16px solid blue;
-  width: 120px;
-  height: 120px;
+  border-top: 16px solid $dark-yellow;
+  border-bottom: 16px solid $dark-yellow;
+  width: 12rem;
+  height: 12rem;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 

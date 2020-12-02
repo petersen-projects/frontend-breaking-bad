@@ -1,0 +1,23 @@
+.filter {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding-bottom: 2rem;
+}
+
+.filter__input {
+   flex-grow: 1;
+   padding: 1.2rem;
+   color: $black;
+   border-radius: 1rem;
+   margin: 1rem;
+}
+
+.filter__select {
+   flex-grow: 1;
+   padding: 1.2rem;
+   color: $black;
+   border-radius: 1rem;
+   margin: 1rem;
+}

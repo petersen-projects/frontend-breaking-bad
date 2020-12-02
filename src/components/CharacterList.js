@@ -15,7 +15,7 @@ import {
 } from '../actions/characters';
 import { selectCharacters, getNumberOfPages } from '../selectors/characters';
 import CharacterListItem from './CharacterListItem';
-import LoadingPage from './LoadingPage';
+import Loading from './Loading';
 
 export const CharacterList = () => {
    const dispatch = useDispatch()
@@ -114,27 +114,23 @@ export const CharacterList = () => {
 
    return (
       <div className="list-body">
-         { fetching == true ? <LoadingPage /> : null}
+         { fetching == true ? <Loading /> : null}
          {
             filteredData.length === 0 ? (
-               <div className="message">no data :(</div>
+               <div className="list-body__no-data-message">No data available</div>
             ) : (
-               <div>
-                  {
-                     filteredData.map((character, index) => {
-                        if (filteredData.length === index + 1) {
-                           return (
-                              <div ref={lastCharacterRef} key={index}>
-                                 <CharacterListItem {...character} />
-                              </div>
-                           )
-                        } else {
-                           return <CharacterListItem key={index} {...character} />
-                        }
-                           
-                     })
+               filteredData.map((character, index) => {
+                  if (filteredData.length === index + 1) {
+                     return (
+                        <div ref={lastCharacterRef} key={index}>
+                           <CharacterListItem {...character} />
+                        </div>
+                     )
+                  } else {
+                     return <CharacterListItem key={index} {...character} />
                   }
-               </div>
+                     
+               })
             )
          }
       </div>

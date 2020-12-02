@@ -5,6 +5,7 @@ import 'normalize.css';
 import './styles/styles.scss';
 
 import configureStore from './store/configureStore';
+import Header from './components/Header';
 import CharacterPage from './components/CharacterPage';
 
 const store = configureStore();
@@ -12,7 +13,10 @@ const store = configureStore();
 ReactDOM.render(
    <div>
       <Provider store={store}>
-         <CharacterPage />
+         <div>
+            <Header />
+            <CharacterPage />
+         </div>
       </Provider>
    </div>
    ,document.getElementById('app')
