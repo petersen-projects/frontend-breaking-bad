@@ -1,34 +1,35 @@
 import React from 'react';
-import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 
+import filtersReducer from '../../reducers/filters';
+import { setNameFilter, setCharacterStatusFilter } from '../../actions/filters';
+import { filters } from '../fixtures/filters';
 import { CharacterListFilter } from '../../components/CharacterListFilter';
 
-const mockStore = configureMockStore([thunk]);
-const initialState = {
-   characters: {
-      data: [],
-      filteredData: []
-   },
-   filters: {}
-};
-
-let setCharacterNameFilter, wrapper;
-
-beforeEach(() => {
-   setCharacterNameFilter = jest.fn();
-   wrapper = mount(
-      <Provider store={mockStore(initialState)}>
-         <CharacterListFilter
-            filters={{}}
-            setCharacterNameFilter={setCharacterNameFilter}
-         />
+describe('<CharacterListFilter /> tests', () => {
+   const mockStore = createStore(filtersReducer, {filters});
+   mockStore.dispatch = jest.fn();
+   const getWrapper = () => mount(
+      <Provider store={mockStore}>
+         <CharacterListFilter />
       </Provider>
    );
-});
 
-test('should render CharacterListFilter correctly', () => {
-   expect(wrapper).toMatchSnapshot();
+   it('should render correctly', () => {
+      expect(getWrapper).toMatchSnapshot();
+   });
+
+   it('test name change event', () => {
+      const wrapper = getWrapper();
+      wrapper.find('input').simulate('change');
+      expect(mockStore.dispatch).toHaveBeenCalledWith(setNameFilter());
+   });
+
+   it('test status change event', () => {
+      const wrapper = getWrapper();
+      wrapper.find('select').simulate('change');
+      expect(mockStore.dispatch).toHaveBeenCalledWith(setCharacterStatusFilter());
+   });
 });
