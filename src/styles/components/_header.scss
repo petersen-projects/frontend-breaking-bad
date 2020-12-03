@@ -6,6 +6,7 @@ $header-height: 8rem;
    }
    .header__made-by {
       font-size: $font-size-small;
+      
    }
 }
 
@@ -31,16 +32,10 @@ $header-height: 8rem;
 .header__wrapper {
    display: flex;
    justify-content: space-between;
-   align-items: center;
 }
 
-.header__title {
+.header__title, .header__made-by {
+   text-align: center;
    color: $white;
-   padding: $default-padding;
-}
-
-.header__made-by {
-   color: $white;
-   padding: $default-padding;
-   opacity: .9;
+   flex-grow: 1;
 }

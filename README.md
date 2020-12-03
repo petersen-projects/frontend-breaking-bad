@@ -28,6 +28,10 @@ To publish the application, and also have a development environment, I chose [we
 
 React Hooks were used in order to simplify the components, alongside Redux to improve action / state manipulation.
 
+The pagination was all done in memory. Having a few results returned from the API (about 63 rows) motivated this decision. Also the Breaking Bad API matches the exact name on the filter and the status filter wasn't working well when I tested it, so I wanted to make something more practical while implementing the pagination.
+
+I've left the functions that sends requests to the API with limit, offset, name and status but abandoned the idea of using the API filters because of the reasons mentioned before. So we only request once, obtaining all the characters from the API and work with them in-memory via slice and filter, removing any "loading" icons while using the infinite scroll.
+
 ## Commands to run in Development Mode
 
 If you wish to run the code in development mode, it is important to use node 8 (you can do so using [NVM](https://github.com/nvm-sh/nvm)).
