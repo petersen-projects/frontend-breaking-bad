@@ -6,7 +6,7 @@ import { mount } from 'enzyme';
 import filtersReducer from '../../reducers/filters';
 import { setNameFilter, setCharacterStatusFilter } from '../../actions/filters';
 import { filters } from '../fixtures/filters';
-import { CharacterListFilter } from '../../components/CharacterListFilter';
+import CharacterListFilter from '../../components/CharacterListFilter';
 
 describe('<CharacterListFilter /> tests', () => {
    const mockStore = createStore(filtersReducer, {filters});

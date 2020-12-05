@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { setNameFilter, setCharacterStatusFilter } from '../actions/filters';
 
-export const CharacterListFilter = () => {
+const CharacterListFilter = () => {
    const name = useSelector(state => state.filters.name)
    const status = useSelector(state => state.filters.status)
    const dispatch = useDispatch()

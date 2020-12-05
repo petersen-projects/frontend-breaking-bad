@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import '../__mocks__/intersectionObserverMock';
 
-import { CharacterList } from '../../components/CharacterList';
+import CharacterList from '../../components/CharacterList';
 import characters from '../fixtures/characters';
 
 

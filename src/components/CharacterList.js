@@ -17,7 +17,7 @@ import { selectCharacters, getNumberOfPages } from '../selectors/characters';
 import CharacterListItem from './CharacterListItem';
 import Loading from './Loading';
 
-export const CharacterList = () => {
+const CharacterList = () => {
    const dispatch = useDispatch()
 
    const data = useSelector(state => state.characters.data)

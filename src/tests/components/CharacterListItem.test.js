@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CharacterListItem }  from '../../components/CharacterListItem';
+import CharacterListItem  from '../../components/CharacterListItem';
 import characters from '../fixtures/characters';
 
 describe('<CharacterListItem /> tests', () => {   

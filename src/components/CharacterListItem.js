@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CharacterListItem = ({
+const CharacterListItem = ({
    name, age, img, status, lastCharacterRef
 }) => (
    <div ref={lastCharacterRef} className="list-item">
