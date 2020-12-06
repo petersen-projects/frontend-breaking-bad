@@ -65,7 +65,7 @@ const CharacterList = () => {
       })
 
       if (node) observer.current.observe(node)
-   })
+   }, [filteredData])
 
    const updateFilteredData = (() => {
       if (data.length) {
